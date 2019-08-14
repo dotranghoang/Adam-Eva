@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let Apple = function () {
+        this.weight = 10
+        this.getApple = function () {
+           alert("Got a Apple weight: "+ this.weight);
+        }
+        this.decrease = function () {
+            this.weight--;
+            if(this.weight == 0) {
+                alert("Apple is empty!...");
+            }
+        }
+        this.getWeight = function () {
+            return this.weight;
+        }
+    };
+    function Human (name,gender,weight) {
+        this.name = name ;
+        this.gender = gender;
+        this.weight = weight;
+        this.getName = function () {
+            return this.name;
+        }
+        this.getGender = function () {
+            return this.gender;
+        }
+        this.getWeight = function () {
+            return this.weight;
+        }
+        this.sayHi = function () {
+         alert("Hi I'm "+this.name);
+        }
+        this.eatApple = function(apple) {
+            this.apple = apple;
+            if(this.apple > 0) {
+             this.apple--;
+             this.weight++;
+            } else {
+                alert("Apple empty!..")
+            }
+        }
+        this.getWeightApple = function () {
+            return this.apple;
+        }
+
+    }
+    let apple = new Apple();
+    let adam = new Human("Adam","Male",70);
+    let eva = new Human("Eva","Female",55);
+    adam.sayHi();
+    alert("Adam Weight: "+ adam.getWeight());
+    apple.getApple();
+    adam.eatApple(apple.getWeight());
+    alert( adam.getName() + " Eat Apple...");
+    alert("Apple Weight: "+adam.getWeightApple());
+    alert("Adam Weight: "+ adam.getWeight());
+
+    eva.sayHi();
+    alert("Eva Weight: "+ eva.getWeight());
+    eva.eatApple(adam.getWeightApple());
+    alert( eva.getName() + " Eat Apple...");
+    alert("Apple Weight: " + eva.getWeightApple());
+    alert("Eva Weight: "+ eva.getWeight());
+
+    adam.sayHi();
+    adam.eatApple(eva.getWeightApple());
+    alert( adam.getName() + " Eat Apple...");
+    alert("Apple Weight: "+adam.getWeightApple());
+    alert("Adam Weight: "+ adam.getWeight());
+
+    eva.sayHi();
+    eva.eatApple(adam.getWeightApple());
+    alert( eva.getName() + " Eat Apple...");
+    alert("Apple Weight: " + eva.getWeightApple());
+    alert("Eva Weight: "+ eva.getWeight());
+
+    adam.sayHi();
+    adam.eatApple(eva.getWeightApple());
+    alert( adam.getName() + " Eat Apple...");
+    alert("Apple Weight: "+adam.getWeightApple());
+    alert("Adam Weight: "+ adam.getWeight());
+
+    eva.sayHi();
+    eva.eatApple(adam.getWeightApple());
+    alert( eva.getName() + " Eat Apple...");
+    alert("Apple Weight: " + eva.getWeightApple());
+    alert("Eva Weight: "+ eva.getWeight());
+
+    adam.sayHi();
+    adam.eatApple(eva.getWeightApple());
+    alert( adam.getName() + " Eat Apple...");
+    alert("Apple Weight: "+adam.getWeightApple());
+    alert("Adam Weight: "+ adam.getWeight());
+
+    eva.sayHi();
+    eva.eatApple(adam.getWeightApple());
+    alert( eva.getName() + " Eat Apple...");
+    alert("Apple Weight: " + eva.getWeightApple());
+    alert("Eva Weight: "+ eva.getWeight());
+
+    adam.sayHi();
+    alert( adam.getName() + " Eat Apple...");
+    adam.eatApple(eva.getWeightApple());
+    alert("Apple Weight: "+adam.getWeightApple());
+    alert("Adam Weight: "+ adam.getWeight());
+
+    eva.sayHi();
+    alert( eva.getName() + " Eat Apple...");
+    eva.eatApple(adam.getWeightApple());
+    alert("Apple Weight: " + eva.getWeightApple());
+    alert("Eva Weight: "+ eva.getWeight());
+
+    adam.sayHi();
+    adam.eatApple(eva.getWeightApple());
+    alert("Adam Weight: "+ adam.getWeight());
+
+    eva.sayHi();
+    eva.eatApple(adam.getWeightApple());
+    alert("Eva Weight: "+ eva.getWeight());
+
+
+
+
+    
+    // let apple = new Apple();
+    // apple.getApple();
+
+    </script>
+</body>
+</html>
